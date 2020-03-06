@@ -10,16 +10,10 @@ namespace DidYouMeanBLL.Controllers
     [ApiController]
     public class DidYouMeanController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        private readonly ILogger<DidYouMeanController> _logger;
-
+        string guid;
         public DidYouMeanController(ILogger<DidYouMeanController> logger)
         {
-            _logger = logger;
+            guid = Guid.NewGuid().ToString();
         }
 
         [HttpGet]
@@ -27,6 +21,8 @@ namespace DidYouMeanBLL.Controllers
         public IEnumerable<string> Get(string keyWord, int distance, [FromQuery]string[] words)
         {
             List<string> output = new List<string>();
+            output.Add(guid);
+
             int? pos = Array.IndexOf(words, keyWord);
             if (pos != null && pos >= 0)
             {

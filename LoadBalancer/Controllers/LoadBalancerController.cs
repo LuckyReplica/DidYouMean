@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,7 +35,22 @@ namespace LoadBalancer.Controllers
         [Route("GetWords/{keyWord}/{distance}")]
         public IEnumerable<string> Get(string keyWord, int distance)
         {
-            return LoadBalanceAsync(keyWord, distance).Result;
+            var returnOutput = LoadBalanceAsync(keyWord, distance).Result;
+
+            // Start of logging.
+            string path = "log.txt";
+            if (!System.IO.File.Exists(path))
+            {
+                // Create a file to write to.
+                System.IO.File.CreateText(path);
+            }
+
+            using (StreamWriter w = System.IO.File.AppendText("log.txt"))
+            {
+                Log(returnOutput, w);
+            }
+
+            return returnOutput.Skip(1);
         }
 
         private async Task<IEnumerable<string>> LoadBalanceAsync(string keyWord, int distance)
@@ -60,6 +76,19 @@ namespace LoadBalancer.Controllers
 
             var response = await c.ExecuteAsync<IEnumerable<string>>(request);
             return response.Data;
+        }
+
+        public static void Log(IEnumerable<string> words, TextWriter w)
+        {
+            w.Write("\r\nLog Entry : ");
+            w.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
+
+            var wordsArray = words.ToArray();
+            w.WriteLine($"  : Guid: {wordsArray[0]}");
+            for (int i = 1; i < wordsArray.Length; i++)
+            {
+                w.WriteLine($"  : {wordsArray[i]}");
+            }
         }
     }
 }
