@@ -10,7 +10,7 @@ namespace DidYouMeanBLL.Controllers
     [ApiController]
     public class DidYouMeanController : ControllerBase
     {
-        private static string guid = Guid.NewGuid().ToString();
+        private static readonly string guid = Guid.NewGuid().ToString();
 
         [HttpGet]
         [Route("getWords")]
