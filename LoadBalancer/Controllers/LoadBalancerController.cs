@@ -29,7 +29,7 @@ namespace LoadBalancer.Controllers
             _logger = logger;
         }
 
-        int urlIndex = 0;
+        private static int urlIndex = 0;
 
         [HttpGet]
         [Route("UseAsync")]
@@ -94,6 +94,11 @@ namespace LoadBalancer.Controllers
             RestClient c = new RestClient();
             c.BaseUrl = new Uri(Urls[urlIndex % 2]);
             urlIndex += 1;
+
+            if (urlIndex == 2)
+            {
+                urlIndex = 1;
+            }
 
             var request = new RestRequest(Method.GET);
 
