@@ -10,11 +10,7 @@ namespace DidYouMeanBLL.Controllers
     [ApiController]
     public class DidYouMeanController : ControllerBase
     {
-        string guid;
-        public DidYouMeanController(ILogger<DidYouMeanController> logger)
-        {
-            guid = Guid.NewGuid().ToString();
-        }
+        private static string guid = Guid.NewGuid().ToString();
 
         [HttpGet]
         [Route("getWords")]
