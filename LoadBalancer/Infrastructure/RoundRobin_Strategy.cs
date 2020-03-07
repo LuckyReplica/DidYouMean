@@ -20,7 +20,7 @@ namespace LoadBalancer.Infrastructure
             var url = Urls[index];
             index++;
 
-            if (index == 2)
+            if (index == Urls.Length)
             {
                 index = 0;
             }
