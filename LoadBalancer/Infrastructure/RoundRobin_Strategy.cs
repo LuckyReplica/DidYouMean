@@ -17,12 +17,12 @@ namespace LoadBalancer.Infrastructure
 
         public string BalanceUrl()
         {
-            var url = Urls[index % 2];
+            var url = Urls[index];
             index++;
 
             if (index == 2)
             {
-                index = 1;
+                index = 0;
             }
 
             return url;

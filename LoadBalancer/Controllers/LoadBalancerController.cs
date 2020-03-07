@@ -42,7 +42,8 @@ namespace LoadBalancer.Controllers
             if (!System.IO.File.Exists(path))
             {
                 // Create a file to write to.
-                System.IO.File.CreateText(path);
+                var logFile = System.IO.File.CreateText(path);
+                logFile.Close();
             }
 
             using (StreamWriter w = System.IO.File.AppendText("log.txt"))
