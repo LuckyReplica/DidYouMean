@@ -35,7 +35,7 @@ namespace LoadBalancer.Controllers
         [Route("GetWords/{keyWord}/{distance}")]
         public IEnumerable<string> Get(string keyWord, int distance)
         {
-            var returnOutput = LoadBalanceAsync(keyWord, distance).Result;
+            var returnOutput =  LoadBalanceAsync(keyWord, distance).Result;
 
             // Start of logging.
             string path = "log.txt";
@@ -51,19 +51,13 @@ namespace LoadBalancer.Controllers
                 Log(returnOutput, w);
             }
 
-            return returnOutput.Skip(1);
+            return returnOutput.Skip(2);
         }
 
         private async Task<IEnumerable<string>> LoadBalanceAsync(string keyWord, int distance)
         {
             RestClient c = new RestClient();
             c.BaseUrl = new Uri(_Strategy.BalanceUrl());//new Uri(Urls[urlIndex % 2]);
-            urlIndex += 1;
-
-            if (urlIndex == 2)
-            {
-                urlIndex = 1;
-            }
 
             var request = new RestRequest(Method.GET);
 
@@ -86,7 +80,9 @@ namespace LoadBalancer.Controllers
 
             var wordsArray = words.ToArray();
             w.WriteLine($"  : Guid: {wordsArray[0]}");
-            for (int i = 1; i < wordsArray.Length; i++)
+            w.WriteLine(wordsArray[1]);
+
+            for (int i = 2; i < wordsArray.Length; i++)
             {
                 w.WriteLine($"  : {wordsArray[i]}");
             }

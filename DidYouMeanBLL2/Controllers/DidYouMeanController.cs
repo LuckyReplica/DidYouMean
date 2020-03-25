@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -18,6 +20,14 @@ namespace DidYouMeanBLL.Controllers
         {
             List<string> output = new List<string>();
             output.Add(guid);
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Looking for: " + keyWord + ". Distance of words to travel: " + distance.ToString());
+            sb.AppendLine("Request received: " + DateTime.Now.ToLongTimeString());
+            output.Add(sb.ToString());
+
+            Thread.Sleep(5000);
 
             int? pos = Array.IndexOf(words, keyWord);
             if (pos != null && pos >= 0)

@@ -1,0 +1,181 @@
+
+Log Entry : 18:49:38 9. marts 2020
+  : Guid: 824e74ae-c602-41dc-a36f-6b512d37c016
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:49:33
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:49:57 9. marts 2020
+  : Guid: 05ee1178-d504-418c-8f8b-d830638cc06a
+Looking for: Cold. Distance of words to travel: 5
+Request received: 18:49:52
+
+
+Log Entry : 18:49:58 9. marts 2020
+  : Guid: 824e74ae-c602-41dc-a36f-6b512d37c016
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:49:53
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:50:45 9. marts 2020
+  : Guid: 05ee1178-d504-418c-8f8b-d830638cc06a
+Looking for: Freezing. Distance of words to travel: 4
+Request received: 18:50:40
+
+  : Freezing
+  : Bracing
+  : Chilly
+  : Cool
+  : Mild
+
+Log Entry : 18:50:47 9. marts 2020
+  : Guid: 824e74ae-c602-41dc-a36f-6b512d37c016
+Looking for: Cool. Distance of words to travel: 1
+Request received: 18:50:42
+
+  : Cool
+  : Mild
+
+Log Entry : 18:51:41 9. marts 2020
+  : Guid: 05ee1178-d504-418c-8f8b-d830638cc06a
+Looking for: Freezing. Distance of words to travel: 1
+Request received: 18:51:36
+
+  : Freezing
+  : Bracing
+
+Log Entry : 18:53:30 9. marts 2020
+  : Guid: 9efd4038-f1b7-4ed5-a681-606a0988dfa6
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:53:24
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:53:35 9. marts 2020
+  : Guid: 970ca5ba-8a02-40c5-9ceb-a735f1de1e7d
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:53:30
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:54:10 9. marts 2020
+  : Guid: 9efd4038-f1b7-4ed5-a681-606a0988dfa6
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:54:05
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:54:15 9. marts 2020
+  : Guid: 970ca5ba-8a02-40c5-9ceb-a735f1de1e7d
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:54:10
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:54:48 9. marts 2020
+  : Guid: 9efd4038-f1b7-4ed5-a681-606a0988dfa6
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:54:43
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:54:50 9. marts 2020
+  : Guid: 970ca5ba-8a02-40c5-9ceb-a735f1de1e7d
+Looking for: Warm. Distance of words to travel: 1
+Request received: 18:54:45
+
+  : Warm
+  : Balmy
+
+Log Entry : 18:58:26 9. marts 2020
+  : Guid: d9fe76af-b71f-4453-8673-816dc7f0920c
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:58:21
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:58:32 9. marts 2020
+  : Guid: a193a300-f742-4aa1-aaaf-b3a39f906479
+Looking for: Warm. Distance of words to travel: 2
+Request received: 18:58:27
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 18:59:22 9. marts 2020
+  : Guid: d9fe76af-b71f-4453-8673-816dc7f0920c
+Looking for: Warm. Distance of words to travel: 3
+Request received: 18:59:17
+
+  : Warm
+  : Balmy
+  : Hot
+  : Sweltering
+
+Log Entry : 19:00:55 9. marts 2020
+  : Guid: a193a300-f742-4aa1-aaaf-b3a39f906479
+Looking for: Warm. Distance of words to travel: 3
+Request received: 19:00:50
+
+  : Warm
+  : Balmy
+  : Hot
+  : Sweltering
+
+Log Entry : 19:00:58 9. marts 2020
+  : Guid: d9fe76af-b71f-4453-8673-816dc7f0920c
+Looking for: Warm. Distance of words to travel: 2
+Request received: 19:00:53
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 19:02:29 9. marts 2020
+  : Guid: a193a300-f742-4aa1-aaaf-b3a39f906479
+Looking for: Warm. Distance of words to travel: 3
+Request received: 19:02:24
+
+  : Warm
+  : Balmy
+  : Hot
+  : Sweltering
+
+Log Entry : 19:02:31 9. marts 2020
+  : Guid: d9fe76af-b71f-4453-8673-816dc7f0920c
+Looking for: Warm. Distance of words to travel: 2
+Request received: 19:02:26
+
+  : Warm
+  : Balmy
+  : Hot
+
+Log Entry : 19:02:33 9. marts 2020
+  : Guid: a193a300-f742-4aa1-aaaf-b3a39f906479
+Looking for: Warm. Distance of words to travel: 4
+Request received: 19:02:27
+
+  : Warm
+  : Balmy
+  : Hot
+  : Sweltering
+  : Scorching
