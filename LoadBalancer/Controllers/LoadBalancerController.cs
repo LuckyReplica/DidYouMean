@@ -35,7 +35,7 @@ namespace LoadBalancer.Controllers
         [Route("GetWords/{keyWord}/{distance}")]
         public IEnumerable<string> Get(string keyWord, int distance)
         {
-            var returnOutput =  LoadBalanceAsync(keyWord, distance).Result;
+            var returnOutput = LoadBalanceAsync(keyWord, distance).Result;
 
             // Start of logging.
             string path = "log.txt";
@@ -56,21 +56,29 @@ namespace LoadBalancer.Controllers
 
         private async Task<IEnumerable<string>> LoadBalanceAsync(string keyWord, int distance)
         {
-            RestClient c = new RestClient();
-            c.BaseUrl = new Uri(_Strategy.BalanceUrl());//new Uri(Urls[urlIndex % 2]);
-
-            var request = new RestRequest(Method.GET);
-
-            request.AddParameter("keyWord", keyWord);
-            request.AddParameter("distance", distance.ToString());
-
-            foreach (string text in Summaries)
+            try
             {
-                request.AddParameter("words", text);
-            }
+                RestClient c = new RestClient();
+                c.BaseUrl = new Uri(_Strategy.BalanceUrl());//new Uri(Urls[urlIndex % 2]);
 
-            var response = await c.ExecuteAsync<IEnumerable<string>>(request);
-            return response.Data;
+                var request = new RestRequest(Method.GET);
+
+                request.AddParameter("keyWord", keyWord);
+                request.AddParameter("distance", distance.ToString());
+
+                foreach (string text in Summaries)
+                {
+                    request.AddParameter("words", text);
+                }
+
+                var response = await c.ExecuteAsync<IEnumerable<string>>(request);
+                return response.Data;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
         public static void Log(IEnumerable<string> words, TextWriter w)

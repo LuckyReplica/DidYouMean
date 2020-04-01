@@ -7,6 +7,8 @@ namespace LoadBalancer.Infrastructure
 {
     public interface ILoadBalanceStrategy
     {
+        public void Initialize();
+
         string BalanceUrl();
     }
 }

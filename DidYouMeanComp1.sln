@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadBalancer", "LoadBalance
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DidYouMeanBLL", "DidYouMeanBLL\DidYouMeanBLL.csproj", "{9C41EB5A-46FD-45C7-B88A-2BB6D37FD789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidYouMeanBLL2", "DidYouMeanBLL2\DidYouMeanBLL2.csproj", "{851A8EAD-56AB-444A-A1F4-7426B3BE5305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DidYouMeanBLL2", "DidYouMeanBLL2\DidYouMeanBLL2.csproj", "{851A8EAD-56AB-444A-A1F4-7426B3BE5305}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceInfo", "..\..\SubcontractorsWork\ServiceInfo.csproj", "{50F2D3E0-C39F-4B22-85BD-37979FA72AFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{851A8EAD-56AB-444A-A1F4-7426B3BE5305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{851A8EAD-56AB-444A-A1F4-7426B3BE5305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851A8EAD-56AB-444A-A1F4-7426B3BE5305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F2D3E0-C39F-4B22-85BD-37979FA72AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F2D3E0-C39F-4B22-85BD-37979FA72AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F2D3E0-C39F-4B22-85BD-37979FA72AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F2D3E0-C39F-4B22-85BD-37979FA72AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
